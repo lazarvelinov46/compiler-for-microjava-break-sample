@@ -1,0 +1,18 @@
+public void visit(Break brk) {
+		
+		if(firstBrake.peek()) {
+			firstBrake.pop();
+			firstBrake.push(false);
+			ArrayList<Integer> breaks=new ArrayList<Integer>();
+			ArrayList<Integer> brkNums=new ArrayList<Integer>();
+			breakNums.push(brkNums);
+			breakAddress.push(breaks);
+		}
+		ArrayList<Integer> breaks=breakAddress.pop();
+		ArrayList<Integer> brkNums=breakNums.pop();
+		brkNums.add(1);
+		breaks.add(Code.pc+1);
+		Code.putJump(0);
+		breakAddress.push(breaks);
+		breakNums.push(brkNums);
+	}
